@@ -33,13 +33,10 @@ const SigninModal = () => {
     }
     setIsLoading(true);
     try {
-      const response = await axios.post(
-        "https://scissor-7s2y.onrender.com/login",
-        {
-          email,
-          password,
-        }
-      );
+      const response = await axios.post("https://scissor2.onrender.com/login", {
+        email,
+        password,
+      });
       if (response.status !== 200) {
         toast({
           variant: "destructive",

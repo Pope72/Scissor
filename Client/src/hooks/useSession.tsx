@@ -12,7 +12,7 @@ const UseSession = ({ children }: { children: React.ReactNode }) => {
     const verify = async () => {
       try {
         const response = await axios.get(
-          "https://scissor-7s2y.onrender.com/verify"
+          "https://scissor2.onrender.com/verify"
         );
         setUserLoggedIn(response.status === 200);
       } catch {
@@ -25,9 +25,7 @@ const UseSession = ({ children }: { children: React.ReactNode }) => {
     const fetchAllLinks = async () => {
       try {
         // Assuming you might have a better method to determine if the user is logged in
-        const response = await axios.get(
-          "https://scissor-7s2y.onrender.com/all"
-        );
+        const response = await axios.get("https://scissor2.onrender.com/all");
 
         if (response.status === 200) {
           setAllMyLinks(response.data.allLinks);
