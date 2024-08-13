@@ -16,6 +16,7 @@ const Input = ({ image, placeholder, value, handleChange }: Input) => {
           type="text"
           placeholder={placeholder}
           className=" px-4 py-2 rounded-l-xl outline-none border-none text-gray-500 font-semibold"
+          required
         />
         <div className="w-fit h-fit m-0 p-0 rounded-r-xl pr-4 flex justify-center items-center">
           <img src={image} width={24} height={24} alt="link" className=" m-0 mt-2 p-0 " />
