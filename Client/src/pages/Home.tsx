@@ -47,7 +47,7 @@ const Home = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://scissor2.onrender.com/create",
+        "https://scissor-se6d.onrender.com/create",
         {
           link: link,
           domain: domain,
@@ -95,7 +95,7 @@ const Home = () => {
     const verify = async () => {
       try {
         const response = await axios.get(
-          "https://scissor2.onrender.com/verify"
+          "https://scissor-se6d.onrender.com/verify"
         );
         setUserLoggedIn(response.status === 200);
       } catch {

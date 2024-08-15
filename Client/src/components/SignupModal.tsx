@@ -31,7 +31,7 @@ const SignupModal = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "https://scissor2.onrender.com/signup",
+        "https://scissor-se6d.onrender.com/signup",
         {
           email,
           password,

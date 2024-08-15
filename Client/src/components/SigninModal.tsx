@@ -33,7 +33,7 @@ const SigninModal = () => {
     }
     setIsLoading(true);
     try {
-      const response = await axios.post("https://scissor2.onrender.com/login", {
+      const response = await axios.post("https://scissor-se6d.onrender.com/login", {
         email,
         password,
       });
