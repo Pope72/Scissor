@@ -8,7 +8,7 @@ dotenv.config();
 const server = express();
 server.use(
   cors({
-    origin: "https://scissor2.vercel.app", // Allow the specific origin
+    origin: "https://scissor-self.vercel.app", // Allow the specific origin
     methods: ["GET", "POST"], // Specify allowed methods
     credentials: true, // Allow credentials
   })
