@@ -68,7 +68,7 @@ const Header = () => {
           onClick={() => setSignUp(true)}
           type="button"
           className={`md:rounded-full  md:flex md:px-10  rounded-full ${
-            userLoggedIn && "hidden"
+            userLoggedIn && "hidden md:hidden"
           } py-1 md:py-2 px-4 font-semibold hidden lg:visible text-center mr-2 justify-center items-center border-0 outline-none bg-[#FF5E3A] hover:brightness-75 transition-all ease-out duration-300 text-white`}
         >
           Register
@@ -78,4 +78,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header;
