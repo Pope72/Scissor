@@ -9,6 +9,8 @@ import {
 import { useUserLinks } from "@/store/useUserStore";
 import QRCode from "qrcode.react";
 import BlueButton from "./BlueButton";
+import { Link } from "react-router-dom";
+
 
 const Tables = () => {
   const { originalLink, shortenedLink, qrCode, qrCodeIndex, clicks } =
@@ -49,7 +51,9 @@ const Tables = () => {
         </TableRow>
         <TableRow>
           <TableCell className="font-medium">Shortened Link</TableCell>
-          <TableCell>{shortenedLink}</TableCell>
+          <TableCell>
+          <Link to={shortenedLink}>{shortenedLink}</Link>
+          </TableCell>
         </TableRow>
         <TableRow>
           <TableCell className="font-medium">QR Code</TableCell>
