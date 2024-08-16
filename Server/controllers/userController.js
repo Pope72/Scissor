@@ -1,5 +1,5 @@
 //Imports
-import user from "../schemas/user.js";
+import userModel from '../schemas/user.js'
 import bcrypt from "bcryptjs";
 import SignToken from "../utils/helpers/signToken.js";
 import linkModel from "../schemas/link.js";
@@ -9,13 +9,13 @@ export const Signup = async (req, res) => {
     const { email, password } = req.body;
     if (!email || !password)
       return res.status(400).json({ error: "Please fill all fields" });
-    const userExists = await user.findOne({ email });
+    const userExists = await userModel.findOne({ email });
     if (userExists)
       return res
         .status(400)
         .json({ error: "Email already linked to another account" });
     const hashedPassword = await bcrypt.hash(password, 12);
-    const newUser = await user.create({
+    const newUser = await userModel.create({
       email,
       password: hashedPassword,
     });
@@ -33,7 +33,7 @@ export const Login = async (req, res) => {
     if (!email || !password)
       return res.status(400).json({ err: "Please fill all fields" });
     // Find user by email
-    const userValid = await user.findOne({ email });
+    const userValid = await userModel.findOne({ email });
     if (!userValid) {
       return res.status(400).json({ err: "User not found" });
     }

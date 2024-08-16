@@ -32,7 +32,7 @@ const RedirectPage = () => {
             title: "Error",
             description: "Link does not exist",
           });
-          navigate("/home");
+          navigate("/");
         }
       } catch (err) {
         // Handle different error cases
@@ -41,7 +41,7 @@ const RedirectPage = () => {
           title: "Error",
           description: "An error occurred while trying to redirect.",
         });
-        navigate("/home");
+        navigate("/");
         console.error(err);
       }
     };
